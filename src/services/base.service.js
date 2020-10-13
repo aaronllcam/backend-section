@@ -54,7 +54,8 @@ class BaseService{
             throw error;
         }
 
-        return this.repository.delete(id);
+        await this.repository.delete(id);
+        return true;
 
      }
 }

@@ -1,4 +1,4 @@
-let _homeService='';
+let _homeService = null;
 class HomeController{
 
     constructor({ HomeService }){

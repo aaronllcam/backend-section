@@ -41,7 +41,7 @@ class IdeaService extends BaseService{
         return _ideaRepository.update(ideaId, { upvotes: idea.upvotes });
     }
 
-    async downVotes(ideaId){
+    async downvotedIdea(ideaId){
         if(!ideaId){
             const error = new Error();
             error.status = 400;
