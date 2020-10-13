@@ -5,7 +5,7 @@ const express = require("express");
 const cors = require('cors'); //varias configuracions deconectividad
 const helmet = require('helmet'); //seguridad por defecto.
 const compression = require("compression"); //nos ayuda a comprimir las peticiones http ara que sea mas rapìda
-require("express-async-errors")  //nos ayuda a capturar en un middleware las excepciones que producen las promesas normalmente
+require("express-async-errors")  //nos ayuda a capturar en un middleware las excepciones asincronas que producen las promesas normalmente
 const { NotFoundMiddleware, ErrorMiddleware } = require('../middlewares')
 
 //funcion que va a requerir las rutas necesarias:
