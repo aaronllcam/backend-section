@@ -1,6 +1,7 @@
 class BaseService{
      constructor( repository ){
         this.repository = repository;
+        
      }
 
      async get(id){
@@ -31,6 +32,8 @@ class BaseService{
      }
 
      async create(entity){
+         console.log("baseService create entity: ", entity);
+         console.log("baseService constructor this.repository: ",this.repository);
          return await this.repository.create(entity);
      }
      async update(id, entity){

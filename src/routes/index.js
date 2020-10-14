@@ -16,7 +16,8 @@ module.exports = function({
     HomeRoutes,
     IdeaRoutes,
     CommentRoutes,
-    UserRoutes
+    UserRoutes,
+    AuthRoutes
 }){
 
     const router = express.Router();
@@ -33,6 +34,8 @@ module.exports = function({
     apiRoutes.use("/user", UserRoutes);
     apiRoutes.use("/idea", IdeaRoutes);
     apiRoutes.use("/comment", CommentRoutes);
+    apiRoutes.use("/auth", AuthRoutes);
+
 
     router.use("/v1/api", apiRoutes); //esto lo hacemos para que nuestrso end points tengan este prefijo '/v1/api'
 

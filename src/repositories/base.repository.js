@@ -13,6 +13,9 @@ class BaseRepository{
     }
 
     async create(entity){
+        console.log("baseRepository create entity: ", entity);
+        console.log("baseRepository create Model: ", this.model);
+
         return await this.model.create(entity);
     }
     async update(id, entity){
