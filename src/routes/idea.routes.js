@@ -1,10 +1,12 @@
 const { Router } = require("express");
+const { ParseIntMiddleware } = require('../middlewares');
+
 
 module.exports = function({ IdeaController }){
     const router = Router();
 
     
-    router.get("/", IdeaController.getAll);
+    router.get("/", [ParseIntMiddleware], IdeaController.getAll);
     router.get("/:userId", IdeaController.get);
     router.post("", IdeaController.create);
     router.patch("/:ideaId", IdeaController.update);
