@@ -10,6 +10,9 @@ const { NotFoundMiddleware, ErrorMiddleware } = require('../middlewares');
 const { UserRoutes } = require("./index.routes");
 const ideaRoutes = require("./idea.routes");
 const commentRoutes = require("./comment.routes");
+const swaggerUI = require('swagger-ui-express');
+const { SWAGGER_PATH } = require('../config');
+const swaggerDocument = require(SWAGGER_PATH);
 
 //funcion que va a requerir las rutas necesarias:
 module.exports = function({ 
@@ -38,6 +41,7 @@ module.exports = function({
 
 
     router.use("/v1/api", apiRoutes); //esto lo hacemos para que nuestrso end points tengan este prefijo '/v1/api'
+    router.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocument));
 
     router.use(NotFoundMiddleware);
     router.use(ErrorMiddleware);
