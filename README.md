@@ -16,6 +16,8 @@ Por otra parte, hemos aplicado funcionalidad y seguridad con algunas dependencia
 
 En cuanto al Unit Testing, lo hemos realizado mediante JEST y mockingoose, notar que por ahora solo hemos realizado el test a la funcionalidad de users.
 
+La documentación le hemos creado usando swagger.
+
 Para finalizar, hemos dockerizado la API para poder hacer un deploy de manera mas sencilla en el cloud y si en un futuro debemos realizar una arquitectura de microservicios que nos sea más sencillo empezar a preparala.
 
 
